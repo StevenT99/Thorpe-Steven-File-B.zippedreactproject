@@ -1,0 +1,39 @@
+{
+  "MovieDataSample": [
+    {
+      "Category": "Action/Adventure",
+      "Title": "Avengers, The",
+      "Year": 2012,
+      "Director": "Joss Whedon",
+      "Rating": "PG-13"
+    },
+    {
+      "Category": "Action/Adventure",
+      "Title": "Batman",
+      "Year": 1989,
+      "Director": "Tim Burton",
+      "Rating": "PG-13"
+    },
+    {
+      "Category": "Action/Adventure",
+      "Title": "Batman & Robin",
+      "Year": 1997,
+      "Director": "Joel Schumacher",
+      "Rating": "PG-13"
+    },
+    {
+      "Category": "Action/Adventure",
+      "Title": "Batman Begins",
+      "Year": 2005,
+      "Director": "Christopher Nolan",
+      "Rating": "PG-13"
+    },
+    {
+      "Category": "Action/Adventure",
+      "Title": "Batman Forever",
+      "Year": 1995,
+      "Director": "Joel Schumacher",
+      "Rating": "PG-13"
+    }
+  ]
+}
