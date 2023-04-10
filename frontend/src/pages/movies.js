@@ -77,9 +77,7 @@ function Movie() {
   return (
     <div style={{ backgroundColor: 'white', padding: '30px' }}>
       <div className="container">
-        <h3 style={{ fontSize: '2rem' }}>
-          Book of Mormon Verse Memorization Tool
-        </h3>
+        <h3 style={{ fontSize: '2rem' }}>Memorization Game!</h3>
         <p style={{ marginBottom: '20px' }}>
           Please write the following verse word for word:
         </p>

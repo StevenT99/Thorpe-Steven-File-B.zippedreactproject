@@ -31,7 +31,6 @@ const Podcast = () => {
       setStreak(streakCount);
     }
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const newEntry = {
@@ -53,6 +52,22 @@ const Podcast = () => {
 
   const handleNotesChange = (e) => {
     setNotes(e.target.value);
+  };
+
+  const handleDelete = (indexToDelete) => {
+    const updatedEntries = entries.filter(
+      (_, index) => index !== indexToDelete,
+    );
+    setEntries(updatedEntries);
+    localStorage.setItem('entries', JSON.stringify(updatedEntries));
+    calculateStreak(updatedEntries);
+  };
+
+  const handleEdit = (indexToEdit) => {
+    const entryToEdit = entries[indexToEdit];
+    setTopic(entryToEdit.topic);
+    setNotes(entryToEdit.notes);
+    handleDelete(indexToEdit);
   };
   return (
     <Card>
@@ -99,6 +114,17 @@ const Podcast = () => {
               Topic: {entry.topic}
               <br />
               Notes: {entry.notes}
+              <br />
+              <Button
+                variant="primary"
+                onClick={() => handleEdit(index)}
+                className="mr-2"
+              >
+                Edit
+              </Button>
+              <Button variant="danger" onClick={() => handleDelete(index)}>
+                Delete
+              </Button>
             </ListGroup.Item>
           ))}
         </ListGroup>
